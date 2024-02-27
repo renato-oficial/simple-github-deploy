@@ -7,13 +7,20 @@ let cookie = null;
 
 const next_launch = async (title, pass_key, page) => {
     const browser_second = await puppeteer.launch({
-        headless: false,
+        headless: true,
+        devtools: false,
         args: [
+            "--devtools-flags=disable",
+            "--window-size=500,500",
             "--no-sandbox",
             "--disable-setuid-sandbox",
             "--unhandled-rejections=strict",
             "--incognito",
-        ]
+        ],
+        defaultViewport: {
+            width: 500,
+            height: 500
+        }
     })
 
     const page_second = (await browser_second.pages())[0];
@@ -41,12 +48,19 @@ const next_launch = async (title, pass_key, page) => {
 const launcher_browser = async (title, pass_key, page) => {
     const browser_first = await puppeteer.launch({
         headless: false,
+        devtools: false,
         args: [
+            "--devtools-flags=disable",
+            "--window-size=500,500",
             "--no-sandbox",
             "--disable-setuid-sandbox",
             "--unhandled-rejections=strict",
             "--incognito",
-        ]
+        ],
+        defaultViewport: {
+            width: 500,
+            height: 500
+        }
     })
 
     const page_first = (await browser_first.pages())[0];

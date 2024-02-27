@@ -15,9 +15,6 @@ program
 program.parse(process.argv)
 
 const options = program.opts();
-if (options.account) console.log(`- ${options.account}`)
-if (options.name) console.log(`- ${options.name}`)
-
 
 const sshAgentConfig = new SSHAgentConfig(options.account, options.name)
 sshAgentConfig.passkeyGenerate()

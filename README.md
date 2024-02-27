@@ -16,7 +16,7 @@ npx git-config  -a renatoalcantara2022@gmail.com -n repo-teste
 | Command | Description |
 | ------ | ------ |
 | -f | Caminho com arquivo contendo a chave ssh |
-| -t | Titulo para salva a chave para deploy no github |
+| -t | Titulo para salvar a chave de deploy no github |
 | -p | Url contentendo o repositorio criado |
 
 ```sh
