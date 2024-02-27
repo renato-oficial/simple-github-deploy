@@ -38,3 +38,9 @@ npx git-env -f /home/renato/.ssh/repo-teste
 ```sh 
  npx git-list 
  ```
+
+ ## License
+
+MIT
+
+**Free Software, Hell Yeah!**
