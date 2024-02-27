@@ -29,7 +29,12 @@ npx git-auth  -f /home/renato/.ssh/repo-teste -t repo-teste -p https://github.co
 | Command | Description |
 | ------ | ------ |
 | -f | Caminho com arquivo contendo a chave ssh |
-```npx git-env -f /home/renato/.ssh/repo-teste```
+
+```sh
+npx git-env -f /home/renato/.ssh/repo-teste
+```
 
 ## Lista todas as chaves
-``` git-list ```
+```sh 
+ npx git-list 
+ ```
