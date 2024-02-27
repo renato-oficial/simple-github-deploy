@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
+import { logger } from "../lib/logger.js"
+import { exec } from "node:child_process"
+
 try {
-    if (extname) throw new Error("The private key does not contains extension")
-    exec('ssh-agent -l', (error, stdout, stderr) => {
+    exec('ssh-add -l', (error, stdout, stderr) => {
         if (error) {
             throw new Error(error)
         }
