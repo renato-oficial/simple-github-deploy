@@ -41,6 +41,7 @@ const next_launch = async (title, pass_key, page) => {
     await page_second.click('button[name="key_submit"]')
     setTimeout(async () => {
         await browser_second.close()
+        logger.info("[-] Github passkey deploy add successfully!")
     }, 5000)
 }
 
@@ -51,7 +52,7 @@ const launcher_browser = async (title, pass_key, page) => {
         devtools: false,
         args: [
             "--devtools-flags=disable",
-            "--window-size=500,500",
+            "--window-size=500,800",
             "--no-sandbox",
             "--disable-setuid-sandbox",
             "--unhandled-rejections=strict",
@@ -59,7 +60,7 @@ const launcher_browser = async (title, pass_key, page) => {
         ],
         defaultViewport: {
             width: 500,
-            height: 500
+            height: 800
         }
     })
 

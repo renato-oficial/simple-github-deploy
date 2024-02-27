@@ -3,6 +3,7 @@ import { logger } from "../lib/logger.js"
 import { program } from 'commander'
 import { exec } from "node:child_process"
 import path from "node:path"
+import { SSHService } from "../class/SSHService.js"
 
 program
     .requiredOption('-f, --file <type>', 'email account from guithub')
@@ -15,22 +16,9 @@ const extname = path.extname(options.file)
 
 try {
     if (extname) throw new Error("The private key does not contains extension")
-    exec('eval "$(ssh-agent -s)"', (error, stdout, stderr) => {
-        if (error) {
-            throw new Error(error)
-        }
-        logger.info(stdout)
-        logger.info(stderr)
-    })
-
-
-    exec(`ssh-add ${options.file}`, (error, stdout, stderr) => {
-        if (error) {
-            throw new Error(error)
-        }
-        logger.info(stdout)
-        logger.info(stderr)
-    })
+    const sshservice = new SSHService()
+    sshservice.sshAgent()
+    sshservice.sshAdd()
 } catch (e) {
     logger.error(e)
 }
