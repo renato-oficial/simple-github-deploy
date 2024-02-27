@@ -32,7 +32,9 @@ const next_launch = async (title, pass_key, page) => {
     const checkbox = await page_second.$('#public_key_read_only')
     await checkbox.click({ delay: 100 })
     await page_second.click('button[name="key_submit"]')
-    await browser_second.close()
+    setTimeout(async () => {
+        await browser_second.close()
+    }, 5000)
 }
 
 

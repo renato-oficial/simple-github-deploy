@@ -1,9 +1,10 @@
 {
-  "name": "github-repository-authenticator",
+  "name": "simple-github-deploy",
   "version": "1.0.0",
   "bin": {
     "git-auth": "bin/Gauth.js",
-    "git-config": "bin/Gconfig.js"
+    "git-config": "bin/Gconfig.js",
+    "git-env": "bin/Genv.js"
   },
   "description": "",
   "main": "index.js",

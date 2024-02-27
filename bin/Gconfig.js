@@ -22,4 +22,7 @@ if (options.name) console.log(`- ${options.name}`)
 const sshAgentConfig = new SSHAgentConfig(options.account, options.name)
 sshAgentConfig.passkeyGenerate()
 
-//npx git-auth -f /home/renato/.ssh/github-repository-authenticator.pub -t GitAuthenticator -p https://github.com/renato-oficial/github-repository-authenticator
+// git remote add origin git@github.com:renato-oficial/repo-teste.git
+// git push -u origin main
+
+//npx git-config  -a renatoalcantara2022@gmail.com -name repo-teste
