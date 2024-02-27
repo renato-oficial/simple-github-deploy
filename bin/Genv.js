@@ -18,7 +18,7 @@ try {
     if (extname) throw new Error("The private key does not contains extension")
     const sshservice = new SSHService()
     sshservice.sshAgent()
-    sshservice.sshAdd()
+    sshservice.sshAdd(options.file)
 } catch (e) {
     logger.error(e)
 }

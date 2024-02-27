@@ -20,15 +20,15 @@ class SSHService {
     }
 
 
-    sshAdd = () => {
+    sshAdd = (file) => {
         try {
-            const result = spawn('ssh-add', ['/home/renato/.ssh/repo-teste'], { shell: true })
+            const result = spawn('ssh-add', [`${file}`], { shell: true })
             result.stdout.on('data', (data) => {
                 console.log(`stdout: ${data}`);
             });
 
             result.stderr.on('data', (data) => {
-                throw new Error(data)
+                console.log(data.toString())
             });
 
 
