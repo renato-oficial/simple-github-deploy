@@ -4,7 +4,8 @@
   "bin": {
     "git-auth": "bin/Gauth.js",
     "git-config": "bin/Gconfig.js",
-    "git-env": "bin/Genv.js"
+    "git-env": "bin/Genv.js",
+    "git-list": "bin/Glist.js"
   },
   "description": "",
   "main": "index.js",
