@@ -5,7 +5,7 @@ class SSHService {
 
     sshClear = () => {
         try {
-            const result = spawn('ssh-add', [`${file}`], { shell: true })
+            const result = spawn('ssh-add ', ['-D'], { shell: true })
             result.stdout.on('data', (data) => {
                 console.log(`stdout: ${data}`);
             });
