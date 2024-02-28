@@ -31,7 +31,6 @@ class SSHService {
                 console.log(data.toString())
             });
 
-
         } catch (error) {
             logger(error)
         }
