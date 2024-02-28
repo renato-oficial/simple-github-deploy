@@ -16,7 +16,7 @@ class SSHAgentConfig {
 
     passkeyGenerate() {
         try {
-            spawn('ssh-keygen', ['-q', '-t', 'ed25519', '-C', `${this.#email}`, '-f', `/home/renato/.ssh/${this.#name}`], { shell: true })
+            spawn('ssh-keygen', ['-q', '-t', 'ed25519', '-C', `${this.#email}`, '-f', `/home/${USER}/.ssh/${this.#name}`], { shell: true })
             logger.info("[-] Passkey has been created successfully!")
         } catch (e) {
             logger.error(e)
