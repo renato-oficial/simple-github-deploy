@@ -10,10 +10,6 @@ class SSHService {
                 console.log(`stdout: ${data}`);
             });
 
-            result.stderr.on('data', (data) => {
-                throw new Error(data)
-            });
-
         } catch (error) {
             logger.error(error)
         }
